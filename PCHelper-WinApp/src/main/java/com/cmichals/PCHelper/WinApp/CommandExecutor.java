@@ -11,6 +11,7 @@ public class CommandExecutor {
 
 	private static final String TEXT_SEND_COMMAND = "textSend";
 	private static final String PRESS_ENTER_COMMAND = "pressEnter";
+	private static final String PRESS_ESC_COMMAND = "pressEsc";
 	private static final String SHIFT_TAB_COMMAND = "shiftTab";
 	private static final String TAB_COMMAND = "tab";
 	private static final String SHIFT_ALT_TAB_COMMAND = "windowBack";
@@ -41,6 +42,9 @@ public class CommandExecutor {
 				break;
 			case ALT_TAB_SELECT_COMMAND:
 				myKeyHandler.selectWindow();
+				break;
+			case PRESS_ESC_COMMAND:
+				myKeyHandler.sendEsc();
 				break;
 			default:
 				break;

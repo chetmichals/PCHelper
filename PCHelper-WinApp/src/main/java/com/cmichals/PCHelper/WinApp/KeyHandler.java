@@ -76,6 +76,11 @@ public class KeyHandler implements ClipboardOwner {
 		inputsSender.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
+	public void sendEsc() {
+		inputsSender.keyPress(KeyEvent.VK_ESCAPE);
+		inputsSender.keyRelease(KeyEvent.VK_ESCAPE);
+	}
+	
 	@Override
 	public void lostOwnership(Clipboard aClipboard, Transferable aContents) {
 		//Don't care
