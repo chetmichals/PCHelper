@@ -17,8 +17,7 @@ import com.google.gson.JsonParser;
  * Hello world!
  *
  */
-public class PortListener 
-{
+public class PortListener {
 	public static final int CONNECTION_PORT_NUMBER = 21016;
 	private static final int BACKLOG_SIZE = 1000;
 	
@@ -27,6 +26,7 @@ public class PortListener
 	private static String SERVICE_DESC = "Utility to interact with PC over network";
 	
 	public static void main(String arg[]) throws IOException{
+		System.out.println("PCHelper Server Started");
 		listen(CONNECTION_PORT_NUMBER);
 	}
 	
