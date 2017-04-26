@@ -46,6 +46,26 @@ public class SendMessage {
         sendGenericMessage("{'command':'pressEsc'}");
     }
 
+    public static void sendMusicPlay() {
+        sendGenericMessage("{'command':'playMusic'}");
+    }
+
+    public static void sendMusicStop() {
+        sendGenericMessage("{'command':'stopMusic'}");
+    }
+
+    public static void sendMusicRandom() {
+        sendGenericMessage("{'command':'randomSong'}");
+    }
+
+    public static void sendDeviceNext() {
+        sendGenericMessage("{'command':'playbackDeviceNext'}");
+    }
+
+    public static void sendDevicePrevious() {
+        sendGenericMessage("{'command':'playbackDevicePrevious'}");
+    }
+
     public static void sendText(String text) {
         Map<String, String> messageMap = new HashMap<>();
         messageMap.put("command", "textSend");

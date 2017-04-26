@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cmichals.pchelper.MainActivity"
+    tools:context="com.cmichals.pchelper.activities.MainActivity"
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
@@ -54,9 +54,9 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="109dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="19dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:onClick="sendShiftTabMessage"
@@ -66,8 +66,8 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="122dp"
-        android:layout_height="52dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -117,14 +117,29 @@
         android:id="@+id/button8"
         android:layout_width="70dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:onClick="sendEscMessage"
         android:text="Esc"
+        app:layout_constraintLeft_toRightOf="@+id/button"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/button2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.533"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="openAudioAcivity"
+        android:text="Audio Activity"
         app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toRightOf="@+id/button3"
-        app:layout_constraintRight_toLeftOf="@+id/button4" />
+        app:layout_constraintRight_toLeftOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
 </android.support.constraint.ConstraintLayout>

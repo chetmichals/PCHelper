@@ -1,0 +1,6 @@
+* Make a common libary that stores the constants for the commands instead of repeating them
+* Make the DNS-SD stuff work
+* Make music stuff use native windows functions, rather than relying on global hotkeys
+* Come up with better solution for routing commands instead of a giant switch statement
+* Better way to go between the activities than a button
+* Make UI for android app not suck

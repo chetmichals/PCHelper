@@ -57,7 +57,7 @@ public class KeyHandler implements ClipboardOwner {
 	
 	public void type(String text) {
 		//Exit alt-tab mode
-		selectWindow(); 
+		reset(); 
 
 		//Put string contents into clipboard
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -79,6 +79,39 @@ public class KeyHandler implements ClipboardOwner {
 	public void sendEsc() {
 		inputsSender.keyPress(KeyEvent.VK_ESCAPE);
 		inputsSender.keyRelease(KeyEvent.VK_ESCAPE);
+	}
+	
+	public void playMusic() {
+		sendCtrlShiftKey(KeyEvent.VK_P);
+	}
+	
+	public void randomSong() {
+		sendCtrlShiftKey(KeyEvent.VK_R);
+	}
+	
+	public void stopMusic() {
+		sendCtrlShiftKey(KeyEvent.VK_S);
+	}
+	
+	public void nextPlaybackDevice() {
+		sendCtrlShiftKey(KeyEvent.VK_O);
+	}
+	
+	public void previousPlaybackDevice() {
+		sendCtrlShiftKey(KeyEvent.VK_I);
+	}
+	
+	private void sendCtrlShiftKey(int keyEvent) {
+		inputsSender.keyPress(KeyEvent.VK_CONTROL);
+		inputsSender.keyPress(KeyEvent.VK_SHIFT);
+		inputsSender.keyPress(keyEvent);
+		inputsSender.keyRelease(keyEvent);
+		inputsSender.keyRelease(KeyEvent.VK_SHIFT);
+		inputsSender.keyRelease(KeyEvent.VK_CONTROL);
+	}
+	
+	public void reset() {
+		selectWindow();
 	}
 	
 	@Override

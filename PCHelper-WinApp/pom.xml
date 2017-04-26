@@ -4,7 +4,7 @@
 
   <groupId>com.cmichals</groupId>
   <artifactId>PCHelper-WinApp</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>PCHelper-WinApp</name>
@@ -46,6 +46,11 @@
        <artifactId>slf4j-simple</artifactId>
        <version>1.6.4</version>
    </dependency>
+	   <dependency>
+	    <groupId>net.java.dev.jna</groupId>
+	    <artifactId>jna</artifactId>
+	    <version>4.4.0</version>
+	</dependency>
   </dependencies>
   <build>
 		<plugins>

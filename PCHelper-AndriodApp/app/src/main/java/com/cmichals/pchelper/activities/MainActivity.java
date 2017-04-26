@@ -1,10 +1,12 @@
-package com.cmichals.pchelper;
+package com.cmichals.pchelper.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.cmichals.pchelper.R;
 import com.cmichals.pchelper.connectionmanager.ServiceFinder;
 import com.cmichals.pchelper.messagesender.SendMessage;
 
@@ -55,5 +57,10 @@ public class MainActivity extends AppCompatActivity {
         String message = editText.getText().toString();
         editText.setText("");
         SendMessage.sendText(message);
+    }
+
+    public void openAudioAcivity(View view) {
+        Intent intent = new Intent(this, AudioSwitcher.class);
+        startActivity(intent);
     }
 }
